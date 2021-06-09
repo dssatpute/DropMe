@@ -5,9 +5,8 @@ const fileinfo = require("../files/filemodel");
 const router=require('express').Router()
 const upload = require("../files/fileupload");
 const uuid4 = require("uuid").v4;
+require("dotenv").config({ path: "./.env" });
 
-
-require("dotenv").config({ path: "./src/.env" });
 app.use(express.static('./src/public'))
 router.post("/", upload.single("myfile"), async (req, res) => {
     const file = new fileinfo({
@@ -22,7 +21,7 @@ router.post("/", upload.single("myfile"), async (req, res) => {
       uuid: files.uuid,
       fileName: files.filename,
       fileSize: files.size,
-      downloadLink: `${process.env.APP_BASE_URL}/files/download/${file.uuid}`
+      downloadLink: `${process.env.APP_BASE_URL}files/download/${file.uuid}`
     })
     
   });
