@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Pacifico&family=Poppins:wght@100&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+.float {
+  position: fixed;
+  bottom: 130px;
+  width: 44px;
+  height: 288px;
+  background-color: #535766;
+  z-index: 6;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.float h3 {
+  margin-top: 45px;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  width: 36px;
+  padding: 4px;
+  height: 200px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fcfcfc;
+  display: inline-block;
+  font-family: "Poppins", cursive;
+}
+/* HEADER  */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: antiquewhite;
+  width: 100%;
+  height: 80px;
+}
+.navigation {
+  font-family: "Poppins";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: 20px;
+  padding: 1rem;
+  font-family: "Pacifico";
+}
+.search {
+  /* float: right; */
+  /* padding: 6px; */
+  border: none;
+  padding: 0.5rem;
+  font-size: 17px;
+  outline: none;
+  border: 1px solid rgb(138, 166, 224);
+  border-radius: 10px;
+}
+.navbar li {
+  text-decoration: none;
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 40px;
+}
+.navbar a {
+  text-decoration: none;
+}
+.navbar {
+  font-weight: bold;
+  /* flex:1; */
+  text-align: right;
+  padding: 1rem;
+}
+
+/* CAROUSEL */
+
+.carousel {
+  /* position: fixed; */
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item-hidden {
+  display: none;
+}
+
+.carousel .carousel-item img {
+  width: 100%;
+  /* max-width: 1000px; */
+  height: auto;
+}
+
+.carousel .carousel-item-visible {
+  display: block;
+  animation: fadeVisibility 1s;
+}
+
+.carousel .actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .actions button {
+  border-radius: 50px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  outline: none;
+}
+.carousel .actions button:hover {
+  background-color: bisque;
+}
+.actions .previous {
+  margin-left: 20px;
+}
+
+.actions .next {
+  margin-right: 20px;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity radial;
+  }
+}
+
+/* INTRODUCTION */
+
+.introduction p {
+  font-family: "Lobster", sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(230, 176, 106);
+  margin: 40px 0;
+}
+
+/* Categories */
+
+.categories {
+  font-family: "Poppins";
+  margin-top: 90px;
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 800px;
+}
+.category-images {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 800px;
+}
+.category-images img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+.category-images .images {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* FEATURED PRODUCTS */
+
+.featured {
+  display: flex;
+  flex-basis: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-bottom: 40px; */
+}
+.product-img img {
+  height: 350px;
+  width: 280px;
+}
+.men {
+  font-family: "Montserrat";
+  width: 700px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 10px;
+}
+.description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.women {
+  font-family: "Montserrat";
+  width: 700px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*example*/
+.deals
+{
+  justify-content: center;
+}
+.deal-items
+{
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  justify-content: center;
+  max-width: 1170px;
+  /* column-gap: 2rem; */
+  row-gap: 2rem;
+  margin: 60px auto;
+  font-family: 'Poppins';
+  
+}
+.product-container {
+  height: 350px;
+  width: 250px;
+}
+.image-container {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.image-container:hover .product-image{
+  opacity: 0.9;
+  transition: transform 0.4s;
+}
+
+.product-image
+{
+  height: 100%;
+  width: 100%;
+}
+.add-to-cart
+{
+  position: absolute;
+  top: 20%;
+  right: 0;
+  transform: translateX(101%);
+  transition: all 0.3s linear;
+  cursor: pointer;
+  background-color: rgb(228, 183, 36);
+  height: 30px;
+  width: 50px;
+  outline: none;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  
+ 
+}
+.add-to-cart:hover .fa-cart-plus{
+  transition: transform 0.3s;
+  transform: scale(1.2);
+}
+.image-container:hover .add-to-cart
+{
+  transform: translateX(0);
+}
+
+/* CART */
+.cart
+{
+  font-family:'Montserrat';
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+  background: rgb(240, 157, 81, 0.5);
+  z-index: 2;
+  visibility: hidden;
+}
+.cart-contents
+{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 3;
+  background: rgb(231, 226, 221);
+  background-color:antiquewhite;
+  padding: 1.5rem;
+  transition: all 0.3s linear;
+  transform: translateX(100%);
+}
+.buy-cart-item
+{
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: orange;
+  font-weight:bold;
+  margin-top: 30px;
+  outline: none;
+  cursor: pointer;
+  
+}
+.cart-item
+{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 1rem;
+  
+}
+.cart-item-image
+{
+  height: 75px;
+  width: 75px;
+  margin-right: 20px;
+}
+.show-cart {
+  transform: translateX(0);
+}
+.cart-visibility
+{
+  visibility: visible;
+}
+.close-cart
+{
+  cursor: pointer;
+}
+.close-cart:hover
+{
+  color: rgb(129, 59, 27);
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+@media screen and (min-width:768px) {
+  .cart-contents
+  {
+    width: 30vw;
+    min-width:450px ;
+  }
+  
+}

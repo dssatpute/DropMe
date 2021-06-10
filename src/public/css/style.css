@@ -4,10 +4,12 @@
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
+    overflow: hidden;
   }
 
 body{
     background-color: rgb(157, 189, 238);
+
 }
 .header
 {
@@ -26,6 +28,7 @@ body{
     padding: 1rem;
     justify-content: space-around;
     flex-wrap: wrap;
+    right: 50px;
 }
 .main .upload-container
 {
@@ -93,11 +96,13 @@ body{
     cursor: pointer;
 }
 .show-link{
-    visibility: hidden;
+    flex-direction: column;
+    /* visibility: hidden; */
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 430px;
+    transition: 0.5s;
 }
 .show-link input
 {
@@ -107,15 +112,60 @@ body{
     width: 400px;
     padding: 0.2rem;
     color: rgb(14, 84, 94);
+   
 }
 .show
 {
-    visibility: visible;
+    visibility: initial;
+}
+.buttons
+{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.buttons .download-button,.copy-button{
+    
+    box-shadow: 0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.10);
+    border-radius: 20px;
+    width: 120px;
+    padding: .2rem;
+    height: 30px;
+    border: none;
+    background-color: blueviolet;
+    color: antiquewhite;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.buttons .download-button:hover,.copy-button:hover{
+    transform: scale(0.95);
 }
 
 /*  */
 .dragged
 {
     transition: 0.5s;
-    transform: scale(0.8);
+    transform: scale(0.8);  
+}
+.toast
+{
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  transform: translate(50%,80px);
+  padding: 10px 20px;
+  background: rgb(107, 107, 177);
+  color: rgb(170, 197, 223);
+  border-radius: 5px;
+  font-size: 18px;
+  transition: transform ease-in-out 0.2s;
+}
+.shows.toast {
+    transform: translate(50%, 0);
+    
+  }
+
+@media screen {
+    
 }

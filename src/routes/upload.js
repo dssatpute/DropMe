@@ -18,7 +18,7 @@ router.post("/", upload.single("myfile"), async (req, res) => {
       link: `${process.env.APP_BASE_URL}files/download/${uuid4()}`,
     });
     const files = await file.save();
-    res.send(`${process.env.APP_BASE_URL}files/${files.uuid}`)
+    res.send(`${process.env.APP_BASE_URL}files/download/${files.uuid}`)
     
   });
 

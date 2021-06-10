@@ -12,6 +12,7 @@ connectDB();
 
 
 app.use('/api/files', require('./routes/upload'));
+app.use('/files', require('./routes/display'));
 app.use('/files/download', require('./routes/download'));
 
 app.listen(PORT, () => {
