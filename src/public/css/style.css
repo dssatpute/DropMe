@@ -1,0 +1,121 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+  }
+
+body{
+    background-color: rgb(157, 189, 238);
+}
+.header
+{
+    padding: 2rem;
+    display: flex;
+}
+.logo
+{
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: 'Lobster';
+}
+.main
+{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.main .upload-container
+{
+    font-family: 'Nanum Gothic';
+    width: 600px;
+    height: 500px;
+    background-color: rgb(202, 238, 238);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.upload-container .drop
+{
+    
+    border: 2px dashed;
+    border-color: rgb(82, 172, 149);
+    height: 80%;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+}
+.main .content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    /* min-width: 200px; */
+    height: 500px;
+}
+.main .content .image-send
+{
+    width: 400px;
+    height: 300px;
+}
+
+.file-upload
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 400px;
+
+}
+.fileinput
+{
+    visibility: hidden;
+}
+.file-upload .cabinet-img
+{
+    height: 100px;
+    width: 150px;
+}
+.chooseFile
+{
+    color:rgb(10, 94, 172);
+    cursor: pointer;
+}
+.show-link{
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 430px;
+}
+.show-link input
+{
+    background-color: rgb(202, 238, 238);
+    border: 2px;
+    border-style: dashed;
+    width: 400px;
+    padding: 0.2rem;
+    color: rgb(14, 84, 94);
+}
+.show
+{
+    visibility: visible;
+}
+
+/*  */
+.dragged
+{
+    transition: 0.5s;
+    transform: scale(0.8);
+}

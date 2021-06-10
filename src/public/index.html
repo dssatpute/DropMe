@@ -4,19 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Upload</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/2c3078e6cf.js" crossorigin="anonymous"></script>
+    <title>DropMe</title>
   </head>
   <body>
+        <div class="header">
+          <div class="logo">
+            DropMe
+          </div>
+        </div>
+
+      <div class="main">
+
+        <div class="upload-container">
+            <div class="drop">
+                <div class="file-upload">
+                  <img class="cabinet-img" src="./images/document.svg" alt="">
+                  <br>
+                  <input type="file" name="myfile" class="fileinput" />
+                  Drag and drop file here or <span class="chooseFile">browse</span></a>
+                </div>
+                <div class="show-link">
+                    <input type="text" class="download-url" readonly>
+                    <a href="" class="URL"><i class="fas fa-file-download" class="downloadBtn"></i></a>
+                </div>
+          </div>
+        </div>
+
+          <div class="content">
+            <img class='image-send' src="./images/6617-removebg-preview.png" alt="">
+          </div>
+
+      </div>
 
 
-
-
-
-    <form action="/api/files" method="post" enctype="multipart/form-data">
-      <!-- <label for="file">Upload</label> -->
-      <input type="file" name="myfile" />
-      <button type="submit">Submit</button>
-    </form>
+    <script src="app.js"></script>
   </body>
 </html>
