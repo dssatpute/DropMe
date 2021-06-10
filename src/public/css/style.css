@@ -1,171 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Pacifico&family=Zilla+Slab:wght@300&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 * {
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
-    overflow: hidden;
-  }
-
-body{
-    background-color: rgb(157, 189, 238);
-
-}
-.header
-{
-    padding: 2rem;
-    display: flex;
-}
-.logo
-{
-    padding: 1rem;
-    font-size: 2rem;
-    font-family: 'Lobster';
-}
-.main
-{
-    display: flex;
-    padding: 1rem;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    right: 50px;
-}
-.main .upload-container
-{
-    font-family: 'Nanum Gothic';
-    width: 600px;
-    height: 500px;
-    background-color: rgb(202, 238, 238);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-.upload-container .drop
-{
-    
-    border: 2px dashed;
-    border-color: rgb(82, 172, 149);
-    height: 80%;
-    width: 90%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;   
-}
-.main .content
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 450px;
-    /* min-width: 200px; */
-    height: 500px;
-}
-.main .content .image-send
-{
-    width: 400px;
-    height: 300px;
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  overflow: hidden;
 }
 
-.file-upload
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    width: 400px;
+body {
+  background-color: rgb(157, 189, 238);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  /* display: flex; */
+}
 
+.logo {
+  padding: 1rem;
+  font-size: 3rem;
+  font-family: "Lobster";
 }
-.fileinput
-{
-    visibility: hidden;
+.main {
+  display: flex;
+  /* padding: 1rem; */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  right: 50px;
 }
-.file-upload .cabinet-img
-{
-    height: 100px;
-    width: 150px;
+.main .upload-container {
+  font-family: "Nanum Gothic";
+  width: 600px;
+  height: 500px;
+  background-color: rgb(202, 238, 238);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.chooseFile
-{
-    color:rgb(10, 94, 172);
-    cursor: pointer;
+.upload-container .drop {
+  border: 2px dashed;
+  border-color: rgb(82, 172, 149);
+  height: 80%;
+  width: 90%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.show-link{
-    flex-direction: column;
-    /* visibility: hidden; */
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 430px;
-    transition: 0.5s;
+.main .content {
+  font-size: 2rem;
+  font-family: "Pacifico";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  /* min-width: 200px; */
+  height: 500px;
 }
-.show-link input
-{
-    background-color: rgb(202, 238, 238);
-    border: 2px;
-    border-style: dashed;
-    width: 400px;
-    padding: 0.2rem;
-    color: rgb(14, 84, 94);
-   
+.main .content .image-send {
+  width: 400px;
+  height: 300px;
 }
-.show
-{
-    visibility: initial;
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 400px;
 }
-.buttons
-{
-    display: flex;
-    width: 300px;
-    justify-content: space-between;
-    margin-top: 30px;
+.fileinput {
+  visibility: hidden;
 }
-.buttons .download-button,.copy-button{
-    
-    box-shadow: 0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.10);
-    border-radius: 20px;
-    width: 120px;
-    padding: .2rem;
-    height: 30px;
-    border: none;
-    background-color: blueviolet;
-    color: antiquewhite;
-    cursor: pointer;
-    transition: 0.2s;
+.file-upload .cabinet-img {
+  height: 100px;
+  width: 150px;
 }
-.buttons .download-button:hover,.copy-button:hover{
-    transform: scale(0.95);
+.chooseFile {
+  color: rgb(10, 94, 172);
+  cursor: pointer;
+}
+.show-link {
+  flex-direction: column;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 430px;
+  transition: 0.5s;
+}
+.show-link input {
+  background-color: rgb(202, 238, 238);
+  border: 2px;
+  border-style: dashed;
+  width: 400px;
+  padding: 0.2rem;
+  color: rgb(14, 84, 94);
+}
+.show {
+  visibility: initial;
+}
+.buttons {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.buttons .download-button,
+.copy-button {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  width: 120px;
+  padding: 0.2rem;
+  height: 30px;
+  border: none;
+  background-color: blueviolet;
+  color: antiquewhite;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.buttons .download-button:hover,
+.copy-button:hover {
+  transform: scale(0.95);
 }
 
 /*  */
-.dragged
-{
-    transition: 0.5s;
-    transform: scale(0.8);  
+.dragged {
+  transition: 0.5s;
+  transform: scale(0.8);
 }
-.toast
-{
+.toast {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   position: absolute;
   bottom: 10px;
   right: 50%;
-  transform: translate(50%,80px);
+  transform: translate(50%, 80px);
   padding: 10px 20px;
-  background: rgb(107, 107, 177);
-  color: rgb(170, 197, 223);
+  background: rgb(36, 36, 104);
+  color: rgb(190, 211, 231);
   border-radius: 5px;
   font-size: 18px;
   transition: transform ease-in-out 0.2s;
 }
 .shows.toast {
-    transform: translate(50%, 0);
-    
-  }
-
-@media screen {
-    
+  transform: translate(50%, 0);
 }

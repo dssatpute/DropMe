@@ -25,16 +25,15 @@ fileinput.addEventListener("change", () => {
   showLink.classList.add("show");
   upload();
 });
+
 drop.addEventListener("drop", (e) => {
   e.preventDefault();
-  drop.classList.remove("dragged");
-  const file = e.dataTransfer.files;
-  if (file.length) {
-    console.log(file);
-    fileinput.files = file;
+  const files = e.dataTransfer.files;
+  if (files.length===1) {
+    fileinput.files = files;
     upload();
   }
-
+  drop.classList.remove("dragged");
   showLink.classList.add("show");
 });
 btn2.addEventListener("click", () => {
@@ -59,7 +58,7 @@ function upload() {
       btn1.href = string;
     }
   };
-  xhr.open("POST", `/api/files`);
+  xhr.open("post", `/api/files`);
   xhr.send(formdata);
 }
 
